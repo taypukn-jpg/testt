@@ -1,12 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tesla — Будущее автопрома и чистой энергии</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Шапка сайта */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo a {
+            font-weight: bold;
+            font-size: 22px;
+            letter-spacing: 3px;
+            text-decoration: none;
+            color: #171a20;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #171a20;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: 0 3px;
+        }
+
+        /* Общие стили для секций */
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14vh 20px 8vh 20px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .content-box {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-box h1 {
+            font-size: 45px;
+            font-weight: 600;
+            color: #171a20;
+            margin-bottom: 15px;
+        }
+
+        .content-box p {
+            font-size: 16px;
+            color: #393c41;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Характеристики */
+        .specs-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .spec-item h3 {
+            font-size: 24px;
+            color: #171a20;
+        }
+
+        .spec-item p {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #5c5e62;
+        }
+
+        /* Кнопки */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 550px;
+            margin-top: auto;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary { background-color: #171a20; color: #ffffff; }
+        .btn-secondary { background-color: rgba(244, 244, 244, 0.65); color: #171a20; backdrop-filter: blur(8px); }
+        .btn:hover { opacity: 0.85; }
+
+        /* СЕКЦИЯ 1: Model Y */
+        #model-y {
+            background-image: url('https://unsplash.com');
+        }
+
+        /* СЕКЦИЯ 2: Автопилот (Темная тема) */
+        #autopilot {
+            background-color: #000;
+            color: #fff;
+        }
+        #autopilot .content-box h1, #autopilot .spec-item h3 { color: #fff; }
+        #autopilot .content-box p, #autopilot .spec-item p { color: #ccffff; }
+        #autopilot .btn-secondary { background-color: rgba(255, 255, 255, 0.2); color: #fff; }
+        #autopilot .btn-primary { background-color: #fff; color: #000; }
+
+        /* СЕКЦИЯ 3: Энергия */
+        #energy {
+            background-image: url('https://unsplash.com');
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .cta-buttons { flex-direction: column; gap: 10px; }
+            nav { display: none; }
+            .specs-container { gap: 20px; }
+            .content-box h1 { font-size: 32px; }
+        }
+    </style>
 </head>
 <body>
-<p>Hello World!</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitss!</p>
+
+    <!-- Навигация -->
+    <header>
+        <div class="logo"><a href="#">TESLA</a></div>
+        <nav>
+            <a href="#model-y">Model Y</a>
+            <a href="#autopilot">Автопилот</a>
+            <a href="#energy">Энергия</a>
+        </nav>
+        <nav><a href="#">Войти</a></nav>
+    </header>
+
+    <main>
+        <!-- Секция 1: Электромобиль -->
+        <section id="model-y">
+            <div class="content-box">
+                <h1>Model Y</h1>
+                <p>Разработан для максимальной безопасности и универсальности. Высокая посадка, вместительный багажник и полный привод позволяют уверенно чувствовать себя в любых дорожных условиях. Пять звезд безопасности в каждом тесте Euro NCAP.</p>
+                
+                <div class="specs-container">
+                    <div class="spec-item">
+                        <h3>533 км</h3>
+                        <p>Запас хода</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>3.7 сек</h3>
+                        <p>0-100 км/ч</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>AWD</h3>
+                        <p>Два мотора</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Индивидуальный заказ</a>
+                <a href="#" class="btn btn-secondary">Узнать больше</a>
+            </div>
+        </section>
+
+        <!-- Секция 2: Технологии (Автопилот) -->
+        <section id="autopilot">
+            <div class="content-box">
+                <h1>Будущее вождения</h1>
+                <p>Система полного самоуправления (Full Self-Driving) выводит комфорт на новый уровень. Нейросети Tesla обрабатывают данные с 8 камер в реальном времени, обеспечивая круговую видимость на 360 градусов. Машина способна самостоятельно менять полосу, парковаться, распознавать светофоры и реагировать на пешеходов.</p>
+                
+                <div class="specs-container">
+                    <div class="spec-item">
+                        <h3>360°</h3>
+                        <p>Обзор камер</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>250 м</h3>
+                        <p>Дальность работы</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>FSD</h3>
+                        <p>Нейросети ИИ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Тест-драйв</a>
+                <a href="#" class="btn btn-secondary">Техпроцесс</a>
+            </div>
+        </section>
+
+        <!-- Секция 3: Экология и энергия -->
+        <section id="energy">
+            <div class="content-box">
+                <h1>Устойчивая энергия</h1>
+                <p>Tesla создает экосистему чистой энергии от генерации до хранения. Солнечные панели (Solar Roof) бесшовно интегрируются в крышу вашего дома, собирая энергию солнца днем, а домашний аккумулятор Powerwall сохраняет ее, чтобы обеспечивать здание электричеством ночью или во время сбоев в сети.</p>
+                
+                <div class="specs-container">
+                    <div class="spec-item">
+                        <h3>100%</h3>
+                        <p>Чистая энергия</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>24/7</h3>
+                        <p>Резервное питание</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Заказать панели</a>
+                <a href="#" class="btn btn-secondary">Подробнее</a>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
